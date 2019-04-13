@@ -1,0 +1,22 @@
+@mixin set-border-sides {
+  border-right: 1px solid $color-border;
+  border-left: 1px solid $color-border;
+}
+
+@mixin set-btn-hover-color($color) {
+  fill: $color;
+  color: $color;
+
+  &:hover {
+    background: $color;
+    fill: white;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    border-width: 3px;
+  }
+}

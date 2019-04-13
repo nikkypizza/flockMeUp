@@ -1,0 +1,32 @@
+.Discount {
+  @include set-border-sides;
+
+  &-Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0 5px 16px;
+  }
+
+  &-UserName {
+    margin: 0;
+    color: $color-main;
+    font: bold 19px/1.2 $font-ALS;
+  }
+
+  &-Amount {
+    padding: 10px 18px 4px 23px;
+    border-radius: 6px 0 0 6px;
+    background: $color-main;
+    color: $color-contrast;
+    font: bold 25px/1.2 $font-ALS;
+    letter-spacing: 2px;
+  }
+
+  &-Description{
+    margin: 0 25px 0 16px;
+    padding-bottom: 21px;
+    color: $color-font-main;
+    font: normal 15px/1.2 $font-ALS;
+  }
+}

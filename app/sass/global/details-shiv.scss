@@ -1,0 +1,28 @@
+details.details_shim_closed,
+details.details_shim_open {
+  display: block
+}
+
+details.details_shim_closed>* {
+  display: none
+}
+
+details.details_shim_closed>summary,
+details.details_shim_open>summary {
+  display: block
+}
+
+details.details_shim_closed>summary:before {
+  content: '\25b6';
+  display: inline-block;
+  margin-right: .4em;
+  padding: 0 .1em;
+  font-size: .9em
+}
+
+details.details_shim_open>summary:before {
+  content: '\25bc';
+  display: inline-block;
+  margin-right: .35em;
+  padding: 0
+}

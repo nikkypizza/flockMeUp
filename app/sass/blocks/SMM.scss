@@ -1,0 +1,50 @@
+.SMM {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 16px 20px 16px;
+  background: white;
+
+  @include set-border-sides;
+
+  &-Button {
+    width: 53px;
+    height: 53px;
+    padding: 0;
+    border: 1px solid;
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &_Ok {
+      @include set-btn-hover-color($color-social-ok)
+    }
+
+    &_Facebook {
+      @include set-btn-hover-color($color-social-facebook)
+    }
+
+    &_Twitter {
+      @include set-btn-hover-color($color-social-twitter)
+    }
+
+    &_Vk {
+      color: $color-social-vk;
+      font: bold 30px/1 'Tahoma', sans-serif;
+
+      &:hover {
+        background: $color-social-vk;
+        color: white;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      &:focus {
+        border-width: 3px;
+      }
+    }
+  }
+}

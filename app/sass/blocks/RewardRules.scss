@@ -1,0 +1,50 @@
+.RewardRules {
+  margin-bottom: 13px;
+  color: white;
+  font: normal 10px/2 $font-rotonda;
+  text-decoration: none;
+
+  &-Summary {
+    display: block;
+    position: relative;
+    padding: 4px 18px 0 0;
+    border: 2px dotted $color-main;
+    outline: 0;
+    font: normal 13px/1 $font-rotonda;
+    cursor: pointer;
+    user-select: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:focus {
+      border-color: $color-contrast;
+    }
+
+    &::after {
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { //IE11
+        content: '';
+      }
+
+      content: '⌄';
+      position: absolute;
+      top: -5px;
+      right: 2px;
+      width: 10px;
+      height: 10px;
+      font-size: 25px;
+    }
+
+  }
+
+  &[open]>.RewardRules-Summary::after {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { //IE11
+      content: '';
+    }
+
+    top: 12px;
+    right: 40px;
+    transform: rotate(180deg);
+  }
+}

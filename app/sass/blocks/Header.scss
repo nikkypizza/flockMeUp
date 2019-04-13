@@ -1,0 +1,43 @@
+.Header {
+  display: flex;
+  border-radius: 15px 15px 0 0;
+  background: $color-main;
+  text-transform: uppercase;
+
+  &-Order {
+    margin: 0;
+    padding: 20px 0 10px 17px;
+    color: white;
+    font: bold 17px/1.2 $font-rotonda;
+
+    &Number {
+      color: $color-contrast;
+    }
+  }
+
+  &-CloseButton {
+    width: 25px;
+    height: 25px;
+    margin: 1px 4px;
+    border: none;
+    border: 1px dashed $color-main;
+    border-radius: 0 8px 0 0;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &:focus {
+      border-color: $color-contrast;
+    }
+  }
+}
